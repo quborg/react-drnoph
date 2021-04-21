@@ -4,11 +4,11 @@ import * as React from "react";
 import { MultiSelectComponent } from "@syncfusion/ej2-react-dropdowns";
 import { SampleBase } from "./sample-base";
 
-import * as data from "./dataSource.json";
+import data from "./dataSource.json";
 export class Templates extends SampleBase {
   constructor() {
     super(...arguments);
-    this.temp = "empList";
+    this.temp = "empList"; // colorsData
     // define the JSON of data
     this.employeesData = data[this.temp];
     // maps the appropriate column to fields property
@@ -59,6 +59,7 @@ export class Templates extends SampleBase {
     );
   }
   render() {
+    console.log(this.temp, data[this.temp], this.employeesData)
     return (
       <div id="multitemp" className="control-pane">
         <div className="control-section">
